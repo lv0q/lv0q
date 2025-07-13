@@ -1,10 +1,14 @@
-<html>
-	<title>lv0q</title>
-	<style>
-	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lv0q</title>
+  <style>
     body {
-      background-color: #0e0e0e;
-      color: #fff;
+      background-image: url('https://i.pinimg.com/1200x/57/7e/fc/577efc464c6c1cd0daaa5e1af5a5eb46.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #000;
       font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
       padding: 0;
@@ -12,36 +16,60 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-	   }
+      min-height: 100vh;
+      text-align: center;
+    }
+
     .button {
+      position: relative;
       margin-top: 2rem;
       padding: 12px 24px;
       font-size: 1rem;
-      background-color: #ffffff10;
-      color: #fff;
-      border: 1px solid #ffffff30;
+      background: rgba(255, 255, 255, 0.2);
+      color: #000;
+      border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 10px;
       cursor: pointer;
-      transition: background 0.1s;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: all 0.3s ease-in-out;
+      overflow: hidden;
     }
-    .button:hover {
-      background-color: #ffffff40;
-	  </style>
-	  
-<head>
-  <style>
+
+    .button::before {
+      content: "";
+      background-image: url('https://i.pinimg.com/originals/f5/53/83/f55383639553c22379aaaf418e4c3b93.png'); /* cloud PNG */
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      z-index: 0;
+    }
+
+    .button:hover::before {
+      opacity: 0.3;
+    }
+
+    .button span {
+      position: relative;
+      z-index: 1;
+    }
+
     .typewriter {
       overflow: hidden;
       border-right: .15em solid white;
       white-space: nowrap;
-      margin: 0 auto;
       letter-spacing: .1em;
       animation: typing 2.5s steps(10, end), blink .75s step-end infinite;
       font-size: 2rem;
-      color: white;
-      text-align: center;
       width: 7ch;
+      margin-top: 20px;
+      color: white;
     }
 
     @keyframes typing {
@@ -53,37 +81,51 @@
       from, to { border-color: transparent }
       50% { border-color: white }
     }
+
+    h2 {
+      color: #000;
+    }
+
+    img {
+      margin-top: 20px;
+      border: 6px solid #000;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
   </style>
 </head>
 <body>
+
   <h1 class="typewriter">lv0q</h1>
-</body>
 
-<br>
+  <img 
+    src="https://i.pinimg.com/1200x/c1/75/08/c175086861d10cf3518c13dfac3af84c.jpg" 
+    alt="Profile Picture" 
+    style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;"
+  >
 
-<img 
-  src="https://i.pinimg.com/1200x/c1/75/08/c175086861d10cf3518c13dfac3af84c.jpg" 
-  alt="Profile Picture" 
-  style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 6px solid white;"
->
+  <div class="button-container">
+    <a href="https://www.pinterest.com" target="_blank">
+      <button class="button"><span>Pinterest</span></button>
+    </a>
+    <a href="https://open.spotify.com/playlist/4NzDtnQZFV5D8KFbBE0dBg?si=c9464a6c7b3b422a" target="_blank">
+      <button class="button"><span>Spotify</span></button>
+    </a>
+    <a href="https://www.instagram.com/lv0qq/" target="_blank">
+      <button class="button"><span>Ig</span></button>
+    </a>
+    <a href="https://www.reddit.com/user/lv0q/" target="_blank">
+      <button class="button"><span>Reddit</span></button>
+    </a>
+  </div>
 
-<div style="display: flex; gap: 20px; justify-content: center; margin-top: 2rem;">
-  <a href="https://www.pinterest.com" target="_blank">
-    <button class="button">Pinterest</button>
-  </a>
-  <a href="https://open.spotify.com/playlist/4NzDtnQZFV5D8KFbBE0dBg?si=c9464a6c7b3b422a" target="_blank">
-    <button class="button">Spotify</button>
-  </a>
-  <a href="https://www.instagram.com/lv0qq/" target="_blank">
-    <button class="button">Ig</button>
-  </a>
-  <a href="https://www.reddit.com/user/lv0q/" target="_blank">
-    <button class="button">Reddit</button>
-  </a>
-</div>
-
-<br>
-<h2>lv0q refers to lav no questions<h2/>
+  <h2 style="margin-top: 30px;">lv0q refers to lav no questions</h2>
 
 </body>
 </html>
